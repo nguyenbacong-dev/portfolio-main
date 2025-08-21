@@ -233,7 +233,7 @@
         typeEffect(elements.devName, "Nguyen Ba Cong", 150);
         typeEffect(
           elements.devTitle,
-          "Desinger & Beginner Web Developer",
+          "Beginner Web Developer",
           100,
           2000
         );
@@ -307,7 +307,7 @@
           observer.observe(section);
         });
 
-        // Enhanced GitHub Activity Generation
+        // Enhanced GitHub Activity Generation - TIDAK DIUBAH
         function generateGitHubActivity() {
           if (!elements.githubActivity) return;
 
