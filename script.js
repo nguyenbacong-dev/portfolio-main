@@ -233,7 +233,7 @@
         typeEffect(elements.devName, "Nguyen Ba Cong", 150);
         typeEffect(
           elements.devTitle,
-          "Network Administrator & Web Developer",
+          "Designer & Beginner Web Developer",
           100,
           2000
         );
