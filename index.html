@@ -1,60 +1,71 @@
 <!-- ===================== INDEX.HTML ===================== -->
 <!-- Portfolio Website - Main HTML Structure -->
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html class="dark scroll-smooth" lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
-<title>Nguyen Ba Cong</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.emailjs.com/dist/email.min.js" type="text/javascript"></script>
-
-<head>
-  <meta charset="UTF-8">
-  <title>Portfolio Công</title>
-  <!-- favicon -->
-  <link rel="icon" type="image/png" href="image/logocong.png">
-</head>
+  <!-- Định dạng ký tự và responsive cho thiết bị di động -->
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
   
-<link href="style.css" rel="stylesheet"/>
-<style>
-  /* Hiệu ứng underline cho menu */
-  .nav-link {
-    position: relative;
-    transition: color 0.3s ease;
-  }
-  .nav-link::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background: #22d3ee; /* Cyan */
-    transition: width 0.3s ease;
-  }
-  .nav-link:hover::after,
-  .nav-link.active::after {
-    width: 100%;
-  }
-</style>
+  <!-- Tiêu đề trang -->
+  <title>Nguyen Ba Cong</title>
+  
+  <!-- Favicon hiển thị trên tab trình duyệt -->
+  <link rel="icon" type="image/png" href="image/logocong.png">
+  
+  <!-- Font Google Inter cho toàn bộ website -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  
+  <!-- Font Awesome cho icon -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS CDN cho style utility -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- EmailJS CDN để gửi email từ form liên hệ -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js" type="text/javascript"></script>
+  
+  <!-- CSS custom của bạn -->
+  <link href="style.css" rel="stylesheet"/>
+  
+  <!-- CSS hiệu ứng underline cho menu -->
+  <style>
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background: #22d3ee; /* Cyan */
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body class="bg-slate-50 dark:bg-dark-bg text-gray-700 dark:text-gray-200 font-sans transition-colors duration-300">
-<!-- Enhanced Header -->
+<!-- ...existing code... -->
 <header class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-gray-900/90 via-slate-900/80 to-gray-900/90 backdrop-blur-md shadow-lg">
   <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
-    
-    <!-- Logo -->
+    <!-- Logo cá nhân -->
     <a class="text-2xl font-extrabold tracking-wide" href="#home">
       <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Nguyen Ba</span>
       <span class="text-cyan-400">Cong</span>
     </a>
-
-    <!-- Navigation -->
+    <!-- Nút hamburger cho mobile -->
+    <button id="menu-toggle" class="md:hidden text-gray-200 focus:outline-none text-2xl">
+      <i class="fas fa-bars"></i>
+    </button>
+    <!-- Menu điều hướng các section (desktop) -->
     <nav class="hidden md:flex space-x-8">
       <a class="nav-link text-gray-200 hover:text-cyan-400 transition-colors font-medium" href="#home">Home</a>
       <a class="nav-link text-gray-200 hover:text-cyan-400 transition-colors font-medium" href="#about">About</a>
@@ -65,132 +76,157 @@
       <a class="nav-link text-gray-200 hover:text-cyan-400 transition-colors font-medium" href="#testimonials">Testimonials</a>
       <a class="nav-link text-gray-200 hover:text-cyan-400 transition-colors font-medium" href="#contact">Contact</a>
     </nav>
-    
   </div>
+  <!-- Menu mobile ẩn/hiện -->
+  <nav id="mobile-menu" class="md:hidden hidden bg-gray-900/95 px-6 pb-4">
+    <a class="block py-2 nav-link text-gray-200 hover:text-cyan-400 transition-colors font-medium" href="#home">Home</a>
+    <a class="block py-2 nav-link text-gray-200 hover:text-cyan-400 transition-colors font-medium" href="#about">About</a>
+    <a class="block py-2 nav-link text-gray-200 hover:text-cyan-400 transition-colors font-medium" href="#projects">Projects</a>
+    <a class="block py-2 nav-link text-gray-200 hover:text-cyan-400 transition-colors font-medium" href="#skills">Skills</a>
+    <a class="block py-2 nav-link text-gray-200 hover:text-cyan-400 transition-colors font-medium" href="#github">Github</a>
+    <a class="block py-2 nav-link text-gray-200 hover:text-cyan-400 transition-colors font-medium" href="#certificates">Certificates</a>
+    <a class="block py-2 nav-link text-gray-200 hover:text-cyan-400 transition-colors font-medium" href="#testimonials">Testimonials</a>
+    <a class="block py-2 nav-link text-gray-200 hover:text-cyan-400 transition-colors font-medium" href="#contact">Contact</a>
+  </nav>
 </header>
+<!-- ...existing code... -->
 
+<!-- Thêm script sau phần <script src="script.js"></script> -->
 <script>
-  // Highlight nav khi scroll tới section
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 100;
-      if (scrollY >= sectionTop) {
-        current = section.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach((link) => {
-      link.classList.remove("active", "text-cyan-400");
-      if (link.getAttribute("href") === "#" + current) {
-        link.classList.add("active", "text-cyan-400");
-      }
-    });
+  // Toggle mobile menu
+  document.getElementById('menu-toggle').onclick = function() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  };
+  // Tự động ẩn menu khi chọn link trên mobile
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.onclick = () => document.getElementById('mobile-menu').classList.add('hidden');
   });
 </script>
 
-<!-- Enhanced Hero Section -->
-<section class="min-h-screen flex items-center justify-center relative overflow-hidden" id="home">
-<div class="absolute inset-0 gradient-bg opacity-20"></div>
-<div class="absolute inset-0">
-<div class="absolute top-1/4 left-1/4 w-32 h-32 bg-electric-blue rounded-full filter blur-3xl opacity-30 animate-float"></div>
-<div class="absolute bottom-1/3 right-1/4 w-40 h-40 bg-purple-glow rounded-full filter blur-3xl opacity-20 animate-float" style="animation-delay: 1s"></div>
-<div class="absolute top-1/2 left-1/2 w-24 h-24 bg-pink-glow rounded-full filter blur-3xl opacity-25 animate-float" style="animation-delay: 2s"></div>
-</div>
-<div class="container mx-auto px-4 sm:px-6 z-10 text-center">
-<p class="text-lg sm:text-xl md:text-2xl font-light mb-4 text-gray-400 animate-slide-in">
-          Hello, I'm
-        </p>
-<h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 text-white animate-scale-in">
-<span class="typing-container">
-<span class="typing-text gradient-bg bg-clip-text text-transparent" id="dev-name">Nguyen Ba Cong</span>
-</span>
-</h1>
-<h2 class="text-xl sm:text-2xl md:text-3xl font-light mb-8 text-electric-blue animate-slide-up">
-<span class="typing-container" style="animation-delay: 3.5s">
-<span class="typing-text" id="dev-title"></span>
-</span>
-</h2>
-<div class="flex flex-col sm:flex-row justify-center gap-4 mt-8 animate-slide-up">
-<a class="px-6 sm:px-8 py-3 rounded-full bg-gradient-to-r from-electric-blue to-purple-glow text-white font-medium hover:shadow-glow-strong transform hover:scale-105 transition-all duration-300" href="#projects">View My Work</a>
-<a class="px-6 sm:px-8 py-3 rounded-full bg-transparent border-2 border-electric-blue text-electric-blue font-medium hover:bg-electric-blue hover:text-white hover:shadow-glow transform hover:scale-105 transition-all duration-300" href="#contact">Contact Me</a>
-</div>
-</div>
-<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
-<a class="text-white opacity-70 hover:opacity-100 transition-opacity" href="#about">
-<i class="fas fa-chevron-down text-2xl"></i>
-</a>
-</div>
-</section>
-<!-- Enhanced About Section -->
-<section class="py-16 sm:py-28 md:py-28 scroll-mt-20 md:scroll-mt-10" id="about">
-<div class="container mx-auto px-4 sm:px-6">
-<h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 sm:mb-16 text-center relative -mt-5">
-<span class="-ml-16 relative gradient-bg bg-clip-text text-transparent">
-            About Me
-          </span>
-</h2>
-<div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
-<div class="lg:w-2/5 flex justify-center">
-<div class="relative animate-float -mt-10">
-<div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-neuro-dark dark:shadow-neuro-dark border-4 border-gradient-to-r from-electric-blue via-purple-glow to-pink-glow">
-<img alt="Profile Photo" class="w-full h-full object-cover object-center" src="image/nguyenbacong.jpg"/>
-</div>
-<div class="absolute inset-0 rounded-full border-4 border-cyan-glow opacity-50 animate-pulse-slow"></div>
-<div class="absolute -top-4 -right-4 w-8 h-8 bg-green-glow rounded-full animate-pulse sparkle"></div>
-<div class="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-glow rounded-full animate-pulse sparkle" style="animation-delay: 1s"></div>
-</div>
-</div>
-<div class="lg:w-3/5">
-<h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
-              I'm
-              <span class="gradient-bg bg-clip-text text-transparent">Nguyen Ba Cong</span>, a Web Developer
-            </h3>
-<p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-sm sm:text-base">
-              I specialize in building exceptional digital experiences that live
-              on the internet. With a focus on creating elegant, efficient, and
-              user-friendly applications, I bring ideas to life with code.
-            </p>
-<p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed text-sm sm:text-base">
-              As a third-year student in Information Technology,
-              I’ve worked on various projects during my studies
-              and through freelance work—ranging from simple websites to applications with complex features.
-              I enjoy combining technical skills
-              with creative problem-solving to deliver effective and engaging solutions..
-            </p>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-<div class="flex items-center p-3 rounded-lg bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20">
-<i class="fas fa-map-marker-alt text-electric-blue mr-3 text-lg"></i>
-<span class="text-sm sm:text-base">Ha Noi, Viet Nam</span>
-</div>
-<div class="flex items-center p-3 rounded-lg bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/20">
-<i class="fas fa-envelope text-green-glow mr-3 text-lg"></i>
-<span class="text-sm sm:text-base">nguyenbacong.cv@gmail.com</span>
-</div>
-<div class="flex items-center p-3 rounded-lg bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20">
-<i class="fas fa-phone text-purple-glow mr-3 text-lg"></i>
-<span class="text-sm sm:text-base">+84 386 772 205</span>
-</div>
-<div class="flex items-center p-3 rounded-lg bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/20">
-<i class="fas fa-graduation-cap text-orange-glow mr-3 text-lg"></i>
-<span class="text-sm sm:text-base">Software Engineering, Vietnam National University of Agriculture</span>
-</div>
-</div>
-<div class="flex flex-col sm:flex-row gap-4">
-<a class="px-6 py-3 rounded-full bg-gradient-to-r from-electric-blue to-purple-glow text-white font-medium hover:shadow-glow transform hover:scale-105 transition-all duration-300 text-center" download="" href="file/NGUYENBACONG_CV.pdf">
-<i class="fas fa-download mr-2"></i> Download CV
-              </a>
-<a class="px-6 py-3 rounded-full bg-transparent border-2 border-electric-blue text-electric-blue font-medium hover:bg-electric-blue hover:text-white hover:shadow-glow transform hover:scale-105 transition-all duration-300 text-center" href="#contact">
-<i class="fas fa-paper-plane mr-2"></i> Hire Me
-              </a>
-</div>
-</div>
-</div>
-</div>
-</section>
+  <!-- ===================== NAV ACTIVE SCRIPT ===================== -->
+  <!-- Script làm nổi bật menu khi cuộn tới section tương ứng -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 100;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+      navLinks.forEach((link) => {
+        link.classList.remove("active", "text-cyan-400");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active", "text-cyan-400");
+        }
+      });
+    });
+  </script>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <!-- Giới thiệu bản thân, hiệu ứng nền, nút chuyển tới các phần khác -->
+  <section class="min-h-screen flex items-center justify-center relative overflow-hidden" id="home">
+    <!-- Hiệu ứng nền gradient và các khối màu động -->
+    <div class="absolute inset-0 gradient-bg opacity-20"></div>
+    <div class="absolute inset-0">
+      <div class="absolute top-1/4 left-1/4 w-32 h-32 bg-electric-blue rounded-full filter blur-3xl opacity-30 animate-float"></div>
+      <div class="absolute bottom-1/3 right-1/4 w-40 h-40 bg-purple-glow rounded-full filter blur-3xl opacity-20 animate-float" style="animation-delay: 1s"></div>
+      <div class="absolute top-1/2 left-1/2 w-24 h-24 bg-pink-glow rounded-full filter blur-3xl opacity-25 animate-float" style="animation-delay: 2s"></div>
+    </div>
+    <!-- Nội dung chính -->
+    <div class="container mx-auto px-4 sm:px-6 z-10 text-center">
+      <p class="text-lg sm:text-xl md:text-2xl font-light mb-4 text-gray-400 animate-slide-in">
+        Hello, I'm
+      </p>
+      <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 text-white animate-scale-in">
+        <span class="typing-container">
+          <span class="typing-text gradient-bg bg-clip-text text-transparent" id="dev-name">Nguyen Ba Cong</span>
+        </span>
+      </h1>
+      <h2 class="text-xl sm:text-2xl md:text-3xl font-light mb-8 text-electric-blue animate-slide-up">
+        <span class="typing-container" style="animation-delay: 3.5s">
+          <span class="typing-text" id="dev-title"></span>
+        </span>
+      </h2>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8 animate-slide-up">
+        <a class="px-6 sm:px-8 py-3 rounded-full bg-gradient-to-r from-electric-blue to-purple-glow text-white font-medium hover:shadow-glow-strong transform hover:scale-105 transition-all duration-300" href="#projects">View My Work</a>
+        <a class="px-6 sm:px-8 py-3 rounded-full bg-transparent border-2 border-electric-blue text-electric-blue font-medium hover:bg-electric-blue hover:text-white hover:shadow-glow transform hover:scale-105 transition-all duration-300" href="#contact">Contact Me</a>
+      </div>
+    </div>
+    <!-- Nút cuộn xuống About -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+      <a class="text-white opacity-70 hover:opacity-100 transition-opacity" href="#about">
+        <i class="fas fa-chevron-down text-2xl"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <!-- Thông tin cá nhân, ảnh đại diện, mô tả, thông tin liên hệ nhanh, nút tải CV -->
+  <section class="py-16 sm:py-28 md:py-28 scroll-mt-20 md:scroll-mt-10" id="about">
+    <div class="container mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 sm:mb-16 text-center relative -mt-5">
+        <span class="-ml-16 relative gradient-bg bg-clip-text text-transparent">About Me</span>
+      </h2>
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+        <!-- Ảnh đại diện -->
+        <div class="lg:w-2/5 flex justify-center">
+          <div class="relative animate-float -mt-10">
+            <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-neuro-dark dark:shadow-neuro-dark border-4 border-gradient-to-r from-electric-blue via-purple-glow to-pink-glow">
+              <img alt="Profile Photo" class="w-full h-full object-cover object-center" src="image/nguyenbacong.jpg"/>
+            </div>
+            <div class="absolute inset-0 rounded-full border-4 border-cyan-glow opacity-50 animate-pulse-slow"></div>
+            <div class="absolute -top-4 -right-4 w-8 h-8 bg-green-glow rounded-full animate-pulse sparkle"></div>
+            <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-glow rounded-full animate-pulse sparkle" style="animation-delay: 1s"></div>
+          </div>
+        </div>
+        <!-- Thông tin cá nhân -->
+        <div class="lg:w-3/5">
+          <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
+            I'm <span class="gradient-bg bg-clip-text text-transparent">Nguyen Ba Cong</span>, a Web Developer
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-sm sm:text-base">
+            I specialize in building exceptional digital experiences that live on the internet. With a focus on creating elegant, efficient, and user-friendly applications, I bring ideas to life with code.
+          </p>
+          <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed text-sm sm:text-base">
+            As a third-year student in Information Technology, I’ve worked on various projects during my studies and through freelance work—ranging from simple websites to applications with complex features. I enjoy combining technical skills with creative problem-solving to deliver effective and engaging solutions.
+          </p>
+          <!-- Thông tin liên hệ nhanh -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <div class="flex items-center p-3 rounded-lg bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20">
+              <i class="fas fa-map-marker-alt text-electric-blue mr-3 text-lg"></i>
+              <span class="text-sm sm:text-base">Ha Noi, Viet Nam</span>
+            </div>
+            <div class="flex items-center p-3 rounded-lg bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/20">
+              <i class="fas fa-envelope text-green-glow mr-3 text-lg"></i>
+              <span class="text-sm sm:text-base">nguyenbacong.cv@gmail.com</span>
+            </div>
+            <div class="flex items-center p-3 rounded-lg bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20">
+              <i class="fas fa-phone text-purple-glow mr-3 text-lg"></i>
+              <span class="text-sm sm:text-base">+84 386 772 205</span>
+            </div>
+            <div class="flex items-center p-3 rounded-lg bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/20">
+              <i class="fas fa-graduation-cap text-orange-glow mr-3 text-lg"></i>
+              <span class="text-sm sm:text-base">Software Engineering, Vietnam National University of Agriculture</span>
+            </div>
+          </div>
+          <!-- Nút tải CV và liên hệ -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a class="px-6 py-3 rounded-full bg-gradient-to-r from-electric-blue to-purple-glow text-white font-medium hover:shadow-glow transform hover:scale-105 transition-all duration-300 text-center" download="" href="file/NGUYENBACONG_CV.pdf">
+              <i class="fas fa-download mr-2"></i> Download CV
+            </a>
+            <a class="px-6 py-3 rounded-full bg-transparent border-2 border-electric-blue text-electric-blue font-medium hover:bg-electric-blue hover:text-white hover:shadow-glow transform hover:scale-105 transition-all duration-300 text-center" href="#contact">
+              <i class="fas fa-paper-plane mr-2"></i> Hire Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 <!-- Enhanced Projects Section -->
 <section class="py-16 sm:py-20 md:py-28 md:scroll-mt-1 scroll-mt-20 bg-slate-100 dark:bg-gray-900" id="projects">
 <div class="container mx-auto px-4 sm:px-6">
@@ -203,7 +239,7 @@
 <!-- Enhanced Project Cards with better spacing -->
 <div class="project-card rounded-xl overflow-hidden shadow-neuro-light dark:shadow-neuro-dark bg-light-card dark:bg-dark-card glass dark:glass border border-electric-blue/20">
 <div class="relative aspect-video bg-black flex items-center justify-center overflow-hidden">
-<img alt="AI ChatBot By Nguyen Ba Cong" class="w-full h-full" src="image/chatbot.png"/>
+<img alt="Quản Lý Cửa Hàng Nước Hoa OWEN" class="w-full h-full" src="image/owen.png"/>
 <div class="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent opacity-70"></div>
 <div class="absolute top-2 right-2 px-3 py-1 rounded-full bg-gradient-to-r from-green-400 to-blue-500 text-white text-xs font-bold">
                 New
@@ -211,26 +247,22 @@
 </div>
 <div class="p-6">
 <h3 class="text-base font-bold mb-2 text-gray-800 dark:text-white">
-                AI ChatBot by Nguyen Ba Cong
+                Quản Lý Cửa Hàng Nước Hoa OWEN
               </h3>
 <p class="text-gray-600 dark:text-gray-400 mb-4 text-xs text-justify">
-                An intelligent AI-powered chatbot designed to interact naturally with users
-                using natural language processing. Built to handle both general conversations
-                and custom tasks, this chatbot integrates modern AI techniques and user-friendly
-                UI/UX for an engaging experience. Developed by Nguyen Ba Cong with a focus on
-                performance, responsiveness, and scalability.
+                Hệ thống này cho phép người quản trị (Admin) dễ dàng thực hiện các chức năng như thêm mới,
+                chỉnh sửa và xóa sản phẩm, đồng thời hỗ trợ khách hàng trong việc đăng ký tài khoản,
+                đăng nhập, chọn mua sản phẩm, quản lý giỏ hàng và thực hiện thanh toán.
+                Với giao diện trực quan, nhanh chóng và chính xác trong toàn bộ quá trình mua bán.
               </p>
 <div class="flex flex-wrap gap-2 mb-4">
-<span class="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-orange-400 to-orange-600 text-white font-medium">html</span>
-<span class="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-blue-400 to-blue-600 text-white font-medium">CSS</span>
-<span class="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-yellow-400 to-yellow-600 text-white font-medium">JavaScript</span>
-<span class="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-purple-400 to-purple-500 text-white font-medium">Gemini API</span>
+<span class="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-yellow-400 to-yellow-600 text-white font-medium">JavaFX</span>
 </div>
 <div class="flex gap-3">
-<a class="flex-1 px-4 py-2 rounded-full bg-gradient-to-r from-electric-blue to-cyan-glow text-white text-sm font-medium hover:shadow-glow transform hover:scale-105 transition-all duration-300 text-center" href="https://muhammadfikriiii.github.io/FikriChatBot/">
+<a class="flex-1 px-4 py-2 rounded-full bg-gradient-to-r from-electric-blue to-cyan-glow text-white text-sm font-medium hover:shadow-glow transform hover:scale-105 transition-all duration-300 text-center" href="https://drive.google.com/file/d/1QO1hvRbqjdV6zmsYWdrk7IOvBOwigkSR/view?usp=drive_link">
 <i class="fas fa-eye mr-1"></i> Demo
                 </a>
-<a class="flex-1 px-4 py-2 rounded-full bg-transparent border border-electric-blue text-electric-blue text-sm font-medium hover:bg-electric-blue hover:text-white hover:shadow-glow transform hover:scale-105 transition-all duration-300 text-center" href="https://github.com/MuhammadFikriiii/FikriChatBot">
+<a class="flex-1 px-4 py-2 rounded-full bg-transparent border border-electric-blue text-electric-blue text-sm font-medium hover:bg-electric-blue hover:text-white hover:shadow-glow transform hover:scale-105 transition-all duration-300 text-center" href="https://github.com/nguyenbacong-dev/Owen-Store">
 <i class="fab fa-github mr-1"></i> Code
                 </a>
 </div>
@@ -239,15 +271,15 @@
 <!-- Enhanced Project Cards with better spacing -->
 <div class="project-card rounded-xl overflow-hidden shadow-neuro-light dark:shadow-neuro-dark bg-light-card dark:bg-dark-card glass dark:glass border border-electric-blue/20">
 <div class="relative aspect-video overflow-hidden">
-<img alt="Sistem Informasi Penyusunan Kurikulum Poliban Berbasis OBE" class="w-full h-full" src="image/project.png"/>
+<img alt="Sistem Informasi Penyusunan Kurikulum Poliban Berbasis OBE" class="w-full h-full" src="image/BLOG.png"/>
 <div class="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent opacity-70"></div>
 <div class="absolute top-2 right-2 px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-red-500 text-white text-xs font-bold">
-                Website
+                Website Blogger
               </div>
 </div>
 <div class="p-6">
 <h3 class="text-base font-bold mb-2 text-gray-800 dark:text-white">
-                Sistem Informasi Kurikulum OBE
+                Xanh Duong Blog
               </h3>
 <p class="text-gray-600 dark:text-gray-400 mb-4 text-xs text-justify">
                 This Outcome-Based Education (OBE) Curriculum Design
@@ -262,22 +294,20 @@
 <span class="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-orange-400 to-orange-600 text-white font-medium">html</span>
 <span class="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-blue-400 to-blue-600 text-white font-medium">tailwind CSS</span>
 <span class="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-yellow-400 to-yellow-600 text-white font-medium">JavaScript</span>
-<span class="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-orange-800 to-orange-600 text-white font-medium">MySql</span>
-<span class="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-purple-600 to-purple-800 text-white font-medium">PHP</span>
-<span class="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-red-600 to-red-800 text-white font-medium">Laravel</span>
-<span class="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-purple-400 to-purple-500 text-white font-medium">Figma</span>
+<span class="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-yellow-800 to-orange-600 text-white font-medium">Blogger</span>
 </div>
 <div class="flex gap-3">
-<a class="flex-1 px-4 py-2 rounded-full bg-gradient-to-r from-electric-blue to-cyan-glow text-white text-sm font-medium hover:shadow-glow transform hover:scale-105 transition-all duration-300 text-center" href="#">
+<a class="flex-1 px-4 py-2 rounded-full bg-gradient-to-r from-electric-blue to-cyan-glow text-white text-sm font-medium hover:shadow-glow transform hover:scale-105 transition-all duration-300 text-center" href="https://bacong247.blogspot.com/">
 <i class="fas fa-eye mr-1"></i> Demo
                 </a>
-<a class="flex-1 px-4 py-2 rounded-full bg-transparent border border-electric-blue text-electric-blue text-sm font-medium hover:bg-electric-blue hover:text-white hover:shadow-glow transform hover:scale-105 transition-all duration-300 text-center" href="https://github.com/MuhammadFikriiii/baru_kurikulum_OBE">
+<a class="flex-1 px-4 py-2 rounded-full bg-transparent border border-electric-blue text-electric-blue text-sm font-medium hover:bg-electric-blue hover:text-white hover:shadow-glow transform hover:scale-105 transition-all duration-300 text-center" href="#">
 <i class="fab fa-github mr-1"></i> Code
                 </a>
 </div>
 </div>
 </div>
-<!-- Additional enhanced project cards... -->
+<!--
+
 <div class="project-card rounded-xl overflow-hidden shadow-neuro-light dark:shadow-neuro-dark bg-light-card dark:bg-dark-card glass dark:glass border border-purple-glow/20">
 <div class="relative aspect-video overflow-hidden">
 <img alt="Large-Scale LAN Design Using Cisco Packet Tracer " class="w-full h-full" src="image/project1.png"/>
@@ -313,7 +343,7 @@
 </div>
 </div>
 </div>
-<!-- Enhanced Project Cards with better spacing -->
+Enhanced Project Cards with better spacing 
 <div class="project-card rounded-xl overflow-hidden shadow-neuro-light dark:shadow-neuro-dark bg-light-card dark:bg-dark-card glass dark:glass border border-electric-blue/20">
 <div class="relative aspect-video bg-black flex items-center justify-center overflow-hidden">
 <img alt="Snakes-and-Ladders" class="w-full h-full" src="image/ulartangga.png"/>
@@ -347,7 +377,7 @@
 </div>
 </div>
 </div>
-<!-- Continue with more enhanced project cards... -->
+Continue with more enhanced project cards...
 <div class="project-card rounded-xl overflow-hidden shadow-neuro-light dark:shadow-neuro-dark bg-light-card dark:bg-dark-card glass dark:glass border border-pink-glow/20">
 <div class="relative aspect-video overflow-hidden">
 <img alt="AI Chat Assistant" class="w-full h-full" src="image/sima.jpg"/>
@@ -386,6 +416,7 @@
                 </a>
 </div>
 </div>
+-->
 </div>
 </div>
 <div class="text-center mt-12">
@@ -411,8 +442,8 @@
 <div class="skills-grid">
 <!-- C++ -->
 <div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="cpp">
-  <div class="skill-icon-wrapper bg-gradient-to-br from-indigo-500 to-indigo-700">
-    <i class="fas fa-laptop-code skill-icon"></i>
+  <div class="skill-icon-wrapper bg-gradient-to-br from-blue-200 to-indigo-500 flex items-center justify-center w-20 h-20 rounded-full">
+    <img src="image/cplusplus.svg" alt="cpp Logo" class="w-12 h-12 object-contain"/>
   </div>
   <div class="skill-name text-black dark:text-white">C++</div>
   <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
@@ -465,7 +496,7 @@
 
 <!-- GitHub -->
 <div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="github">
-  <div class="skill-icon-wrapper bg-gradient-to-br from-gray-700 to-black">
+  <div class="skill-icon-wrapper bg-gradient-to-br from-gray-100 to-black">
     <i class="fab fa-github skill-icon"></i>
   </div>
   <div class="skill-name text-black dark:text-white">GitHub</div>
@@ -474,11 +505,14 @@
 
 <!-- Figma -->
 <div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="figma">
-  <div class="skill-icon-wrapper bg-gradient-to-br from-purple-500 to-pink-500">
-    <i class="fab fa-figma skill-icon"></i>
+  <div class="skill-icon-wrapper bg-white flex items-center justify-center w-20 h-20 rounded-full">
+    <img src="image/figma.svg" alt="figma Logo" class="w-12 h-12 object-contain"/>
+
   </div>
   <div class="skill-name text-black dark:text-white">Figma</div>
-  <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
+  <div class="skill-level">
+    <div class="skill-level-fill" style="width: 100%"></div>
+  </div>
 </div>
 
 <!-- Capcut -->
@@ -515,6 +549,7 @@
 </div>
 </div>
 </div>
+
 <!-- Enhanced GitHub Stats with Better Layout -->
 <div class="mt-20 scroll-mt-28 sm:scroll-mt-32" id="github">
 <h3 class="text-xl sm:text-2xl font-bold mb-8 text-center gradient-bg bg-clip-text text-transparent">
@@ -1049,86 +1084,89 @@
 </div>
 </div>
 </section>
-<!-- Enhanced Footer -->
-<footer class="py-8 bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white">
-<div class="container mx-auto px-4 sm:px-6">
-<div class="flex flex-col md:flex-row justify-between items-center">
-<div class="mb-4 md:mb-0">
-<a class="text-xl sm:text-2xl font-bold" href="#">
-<span class="gradient-bg bg-clip-text text-transparent"></span><span class="text-electric-blue">Nguyen Ba Cong</span>
-</a>
-</div>
-<div class="flex space-x-6 mb-4 md:mb-0">
-<a class="w-12 h-12 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 flex items-center justify-center text-white hover:from-electric-blue hover:to-purple-glow hover:shadow-glow transform hover:scale-110 transition-all duration-300" href="https://github.com/nguyenbacong-dev">
-<i class="fab fa-github text-xl"></i>
-</a>
-<a class="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 flex items-center justify-center text-white hover:from-electric-blue hover:to-purple-glow hover:shadow-glow transform hover:scale-110 transition-all duration-300" href="https://www.linkedin.com/in/nguyenbacong/">
-<i class="fab fa-linkedin-in text-xl"></i>
-</a>
-<a class="w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center text-white hover:from-electric-blue hover:to-purple-glow hover:shadow-glow transform hover:scale-110 transition-all duration-300" href="http://instagram.com/_nbcong_/">
-<i class="fab fa-instagram text-xl"></i>
-</a>
-<a class="w-12 h-12 rounded-full bg-gradient-to-r from-black to-gray-800 flex items-center justify-center text-white hover:from-electric-blue hover:to-purple-glow hover:shadow-glow transform hover:scale-110 transition-all duration-300" href="https://www.tiktok.com/@nbcong">
-<i class="fab fa-tiktok text-xl"></i>
-</a>
-</div>
-<div class="text-gray-400 text-sm">
-            © <span id="current-year">2025</span> Nguyen Ba Cong. All
-            rights reserved.
+  <!-- ===================== FOOTER ===================== -->
+  <!-- Thông tin bản quyền, link mạng xã hội -->
+  <footer class="py-8 bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <a class="text-xl sm:text-2xl font-bold" href="#">
+            <span class="gradient-bg bg-clip-text text-transparent"></span><span class="text-electric-blue">Nguyen Ba Cong</span>
+          </a>
+        </div>
+        <div class="flex space-x-6 mb-4 md:mb-0">
+          <a class="w-12 h-12 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 flex items-center justify-center text-white hover:from-electric-blue hover:to-purple-glow hover:shadow-glow transform hover:scale-110 transition-all duration-300" href="https://github.com/nguyenbacong-dev">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a class="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 flex items-center justify-center text-white hover:from-electric-blue hover:to-purple-glow hover:shadow-glow transform hover:scale-110 transition-all duration-300" href="https://www.linkedin.com/in/nguyenbacong/">
+            <i class="fab fa-linkedin-in text-xl"></i>
+          </a>
+          <a class="w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center text-white hover:from-electric-blue hover:to-purple-glow hover:shadow-glow transform hover:scale-110 transition-all duration-300" href="http://instagram.com/_nbcong_/">
+            <i class="fab fa-instagram text-xl"></i>
+          </a>
+          <a class="w-12 h-12 rounded-full bg-gradient-to-r from-black to-gray-800 flex items-center justify-center text-white hover:from-electric-blue hover:to-purple-glow hover:shadow-glow transform hover:scale-110 transition-all duration-300" href="https://www.tiktok.com/@nbcong">
+            <i class="fab fa-tiktok text-xl"></i>
+          </a>
+        </div>
+        <div class="text-gray-400 text-sm">
+          © <span id="current-year">2025</span> Nguyen Ba Cong. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ===================== MODAL ADD TESTIMONIAL ===================== -->
+  <!-- Modal thêm nhận xét mới -->
+  <div class="modal" id="testimonial-modal">
+    <div class="modal-content">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-xl sm:text-2xl font-bold gradient-bg bg-clip-text text-transparent">
+          Add New Testimonial
+        </h3>
+        <button class="text-gray-400 hover:text-white text-2xl" id="close-modal">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <form class="space-y-6" id="testimonial-form">
+        <div class="relative">
+          <input class="form-input w-full px-4 py-3 bg-transparent border-2 border-gray-300 dark:border-gray-700 rounded-lg focus:border-electric-blue focus:outline-none focus:shadow-glow transition-all duration-300 text-gray-800 dark:text-gray-200" id="client-name" placeholder=" " required="" type="text"/>
+          <label class="floating-label absolute left-4 top-3 text-gray-500 dark:text-gray-400" for="client-name">Client Name</label>
+        </div>
+        <div class="relative">
+          <input class="form-input w-full px-4 py-3 bg-transparent border-2 border-gray-300 dark:border-gray-700 rounded-lg focus:border-electric-blue focus:outline-none focus:shadow-glow transition-all duration-300 text-gray-800 dark:text-gray-200" id="client-position" placeholder=" " required="" type="text"/>
+          <label class="floating-label absolute left-4 top-3 text-gray-500 dark:text-gray-400" for="client-position">Position &amp; Company</label>
+        </div>
+        <div class="relative">
+          <input class="form-input w-full px-4 py-3 bg-transparent border-2 border-gray-300 dark:border-gray-700 rounded-lg focus:border-electric-blue focus:outline-none focus:shadow-glow transition-all duration-300 text-gray-800 dark:text-gray-200" id="client-avatar" placeholder=" " type="url"/>
+          <label class="floating-label absolute left-4 top-3 text-gray-500 dark:text-gray-400" for="client-avatar">Avatar URL (optional)</label>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Rating</label>
+          <div class="star-rating" id="star-rating">
+            <i class="star fas fa-star" data-rating="1"></i>
+            <i class="star fas fa-star" data-rating="2"></i>
+            <i class="star fas fa-star" data-rating="3"></i>
+            <i class="star fas fa-star" data-rating="4"></i>
+            <i class="star fas fa-star" data-rating="5"></i>
           </div>
-</div>
-</div>
- </footer>
-<!-- Add Testimonial Modal -->
-<div class="modal" id="testimonial-modal">
-<div class="modal-content">
-<div class="flex justify-between items-center mb-6">
-<h3 class="text-xl sm:text-2xl font-bold gradient-bg bg-clip-text text-transparent">
-            Add New Testimonial
-          </h3>
-<button class="text-gray-400 hover:text-white text-2xl" id="close-modal">
-<i class="fas fa-times"></i>
-</button>
-</div>
-<form class="space-y-6" id="testimonial-form">
-<div class="relative">
-<input class="form-input w-full px-4 py-3 bg-transparent border-2 border-gray-300 dark:border-gray-700 rounded-lg focus:border-electric-blue focus:outline-none focus:shadow-glow transition-all duration-300 text-gray-800 dark:text-gray-200" id="client-name" placeholder=" " required="" type="text"/>
-<label class="floating-label absolute left-4 top-3 text-gray-500 dark:text-gray-400" for="client-name">Client Name</label>
-</div>
-<div class="relative">
-<input class="form-input w-full px-4 py-3 bg-transparent border-2 border-gray-300 dark:border-gray-700 rounded-lg focus:border-electric-blue focus:outline-none focus:shadow-glow transition-all duration-300 text-gray-800 dark:text-gray-200" id="client-position" placeholder=" " required="" type="text"/>
-<label class="floating-label absolute left-4 top-3 text-gray-500 dark:text-gray-400" for="client-position">Position &amp; Company</label>
-</div>
-<div class="relative">
-<input class="form-input w-full px-4 py-3 bg-transparent border-2 border-gray-300 dark:border-gray-700 rounded-lg focus:border-electric-blue focus:outline-none focus:shadow-glow transition-all duration-300 text-gray-800 dark:text-gray-200" id="client-avatar" placeholder=" " type="url"/>
-<label class="floating-label absolute left-4 top-3 text-gray-500 dark:text-gray-400" for="client-avatar">Avatar URL (optional)</label>
-</div>
-<div>
-<label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Rating</label>
-<div class="star-rating" id="star-rating">
-<i class="star fas fa-star" data-rating="1"></i>
-<i class="star fas fa-star" data-rating="2"></i>
-<i class="star fas fa-star" data-rating="3"></i>
-<i class="star fas fa-star" data-rating="4"></i>
-<i class="star fas fa-star" data-rating="5"></i>
-</div>
-</div>
-<div class="relative">
-<textarea class="form-input w-full px-4 py-3 bg-transparent border-2 border-gray-300 dark:border-gray-700 rounded-lg focus:border-electric-blue focus:outline-none focus:shadow-glow transition-all duration-300 text-gray-800 dark:text-gray-200" id="testimonial-text" placeholder=" " required="" rows="4"></textarea>
-<label class="floating-label absolute left-4 top-3 text-gray-500 dark:text-gray-400" for="testimonial-text">Testimonial Text</label>
-</div>
-<div class="flex gap-4">
-<button class="flex-1 px-6 py-3 rounded-lg bg-transparent border-2 border-gray-500 text-gray-500 font-medium hover:bg-gray-500 hover:text-white transition-all duration-300" id="cancel-testimonial" type="button">
-              Cancel
-            </button>
-<button class="flex-1 px-6 py-3 rounded-lg bg-gradient-to-r from-electric-blue to-purple-glow text-white font-medium hover:shadow-glow-strong transform hover:scale-105 transition-all duration-300" type="submit">
-<i class="fas fa-plus mr-2"></i> Add Testimonial
-            </button>
-</div>
-</form>
-</div>
-</div>
-<!-- Enhanced JavaScript with Mobile Support -->
+        </div>
+        <div class="relative">
+          <textarea class="form-input w-full px-4 py-3 bg-transparent border-2 border-gray-300 dark:border-gray-700 rounded-lg focus:border-electric-blue focus:outline-none focus:shadow-glow transition-all duration-300 text-gray-800 dark:text-gray-200" id="testimonial-text" placeholder=" " required="" rows="4"></textarea>
+          <label class="floating-label absolute left-4 top-3 text-gray-500 dark:text-gray-400" for="testimonial-text">Testimonial Text</label>
+        </div>
+        <div class="flex gap-4">
+          <button class="flex-1 px-6 py-3 rounded-lg bg-transparent border-2 border-gray-500 text-gray-500 font-medium hover:bg-gray-500 hover:text-white transition-all duration-300" id="cancel-testimonial" type="button">
+            Cancel
+          </button>
+          <button class="flex-1 px-6 py-3 rounded-lg bg-gradient-to-r from-electric-blue to-purple-glow text-white font-medium hover:shadow-glow-strong transform hover:scale-105 transition-all duration-300" type="submit">
+            <i class="fas fa-plus mr-2"></i> Add Testimonial
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-<script src="script.js"></script></body>
+  <!-- ===================== SCRIPT CUSTOM ===================== -->
+  <!-- Script custom cho các hiệu ứng, xử lý form, modal, v.v. -->
+  <script src="script.js"></script>
+</body>
 </html>
