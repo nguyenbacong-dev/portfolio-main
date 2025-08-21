@@ -127,7 +127,7 @@
 
             emailjs.sendForm("service_rw9xkqw", "template_z37v5ih", this).then(
               function (response) {
-                alert("Pesan berhasil dikirim!");
+                alert("Message sent successfully!");
                 elements.emailForm.reset();
               },
               function (error) {
@@ -307,7 +307,7 @@
           observer.observe(section);
         });
 
-        // Enhanced GitHub Activity Generation - TIDAK DIUBAH
+        // Enhanced GitHub Activity Generation
         function generateGitHubActivity() {
           if (!elements.githubActivity) return;
 
