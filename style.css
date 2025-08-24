@@ -437,4 +437,10 @@
         min-height: 44px;
         min-width: 44px;
       }
+.section-title {
+  text-align: center;
+  width: 100%;        /* để chiếm hết ngang màn hình */
+  display: block;     /* đảm bảo span không làm hẹp khung */
+  margin-bottom: 2rem; /* tạo khoảng cách dưới */
+}
     
