@@ -169,17 +169,12 @@
 <section id="about" class="py-16 sm:py-20 md:py-28 bg-slate-100 dark:bg-gray-900">
   <div class="container mx-auto px-4 sm:px-6">
 
-    <!-- Gộp Title vào cùng container -->
-    <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
+    <!-- Title -->
+    <div class="flex flex-col items-center text-center">
       <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-10 md:mb-12">
         <span class="gradient-bg bg-clip-text text-transparent">About Me</span>
       </h2>
     </div>
-
-    <!-- Avatar + Nội dung -->
-    <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
-      <span class="gradient-bg bg-clip-text text-transparent">About Me</span>
-    </h2>
 
     <!-- Content -->
     <div class="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 lg:gap-12">
@@ -433,127 +428,124 @@ Continue with more enhanced project cards...
 </section>
 <!-- Enhanced Skills Section with Better Layout -->
 <section class="py-16 sm:py-20 md:py-32 md:scroll-mt-1 scroll-mt-20" id="skills">
-<div class="container mx-auto px-4 sm:px-6">
-<h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 sm:mb-16 text-center">
-<span class="relative gradient-bg bg-clip-text text-transparent">
-            My Skills
-          </span>
-</h2>
-<!-- Enhanced Technical Skills with Better Grid -->
-<div class="mb-16">
-<h3 class="text-xl sm:text-2xl font-bold mb-8 text-center gradient-bg bg-clip-text text-transparent">
-            Technical Skills
-          </h3>
-<div class="skills-grid">
-<!-- C++ -->
-<div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="cpp">
-  <div class="skill-icon-wrapper bg-gradient-to-br from-blue-200 to-indigo-500 flex items-center justify-center w-20 h-20 rounded-full">
-    <img src="image/cplusplus.svg" alt="cpp Logo" class="w-12 h-12 object-contain"/>
-  </div>
-  <div class="skill-name text-black dark:text-white">C++</div>
-  <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
-</div>
+  <div class="container mx-auto px-4 sm:px-6">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 sm:mb-16 text-center">
+      <span class="relative gradient-bg bg-clip-text text-transparent">
+        My Skills
+      </span>
+    </h2>
 
-<!-- Cisco -->
-<div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="cisco">
-  <div class="skill-icon-wrapper bg-gradient-to-br from-cyan-400 to-blue-500">
-    <i class="fas fa-network-wired skill-icon"></i>
-  </div>
-  <div class="skill-name text-black dark:text-white">Cisco</div>
-  <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
-</div>
+    <!-- Enhanced Technical Skills with Better Grid -->
+    <div class="mb-16">
+      <h3 class="text-xl sm:text-2xl font-bold mb-8 text-center gradient-bg bg-clip-text text-transparent">
+        Technical Skills
+      </h3>
 
-<!-- MySQL -->
-<div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="mysql">
-  <div class="skill-icon-wrapper bg-gradient-to-br from-green-500 to-green-700">
-    <i class="fas fa-database skill-icon"></i>
-  </div>
-  <div class="skill-name text-black dark:text-white">MySQL</div>
-  <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
-</div>
+      <div class="skills-grid">
 
-<!-- JavaScript -->
-<div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="js">
-  <div class="skill-icon-wrapper bg-gradient-to-br from-yellow-400 to-yellow-600">
-    <i class="fab fa-js skill-icon"></i>
-  </div>
-  <div class="skill-name text-black dark:text-white">JavaScript</div>
-  <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
-</div>
+        <!-- C++ -->
+        <div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="cpp">
+          <div class="skill-icon-wrapper bg-gradient-to-br from-blue-200 to-indigo-500 flex items-center justify-center w-20 h-20 rounded-full">
+            <img src="image/cplusplus.svg" alt="cpp Logo" class="w-12 h-12 object-contain"/>
+          </div>
+          <div class="skill-name text-black dark:text-white mt-2">C++</div>
+          <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
+        </div>
 
-<!-- HTML5 -->
-<div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="html">
-  <div class="skill-icon-wrapper bg-gradient-to-br from-orange-400 to-red-500">
-    <i class="fab fa-html5 skill-icon"></i>
-  </div>
-  <div class="skill-name text-black dark:text-white">HTML5</div>
-  <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
-</div>
+        <!-- Cisco -->
+        <div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="cisco">
+          <div class="skill-icon-wrapper bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center w-20 h-20 rounded-full">
+            <i class="fas fa-network-wired text-5xl text-white"></i>
+          </div>
+          <div class="skill-name text-black dark:text-white mt-2">Cisco</div>
+          <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
+        </div>
 
-<!-- Tailwind CSS -->
-<div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="tailwind">
-  <div class="skill-icon-wrapper bg-gradient-to-br from-sky-400 to-blue-600">
-    <i class="fas fa-wind skill-icon"></i>
-  </div>
-  <div class="skill-name text-black dark:text-white">Tailwind CSS</div>
-  <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
-</div>
+        <!-- MySQL -->
+        <div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="mysql">
+          <div class="skill-icon-wrapper bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center w-20 h-20 rounded-full">
+            <i class="fas fa-database text-5xl text-white"></i>
+          </div>
+          <div class="skill-name text-black dark:text-white mt-2">MySQL</div>
+          <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
+        </div>
 
-<!-- GitHub -->
-<div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="github">
-  <div class="skill-icon-wrapper bg-gradient-to-br from-gray-100 to-black">
-    <i class="fab fa-github skill-icon"></i>
-  </div>
-  <div class="skill-name text-black dark:text-white">GitHub</div>
-  <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
-</div>
+        <!-- JavaScript -->
+        <div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="js">
+          <div class="skill-icon-wrapper bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center w-20 h-20 rounded-full">
+            <i class="fab fa-js text-5xl text-white"></i>
+          </div>
+          <div class="skill-name text-black dark:text-white mt-2">JavaScript</div>
+          <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
+        </div>
 
-<!-- Figma -->
-<div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="figma">
-  <div class="skill-icon-wrapper bg-white flex items-center justify-center w-20 h-20 rounded-full">
-    <img src="image/figma.svg" alt="figma Logo" class="w-12 h-12 object-contain"/>
+        <!-- HTML5 -->
+        <div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="html">
+          <div class="skill-icon-wrapper bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center w-20 h-20 rounded-full">
+            <i class="fab fa-html5 text-5xl text-white"></i>
+          </div>
+          <div class="skill-name text-black dark:text-white mt-2">HTML5</div>
+          <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
+        </div>
 
-  </div>
-  <div class="skill-name text-black dark:text-white">Figma</div>
-  <div class="skill-level">
-    <div class="skill-level-fill" style="width: 100%"></div>
-  </div>
-</div>
+        <!-- Tailwind CSS -->
+        <div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="tailwind">
+          <div class="skill-icon-wrapper bg-gradient-to-br from-sky-400 to-blue-600 flex items-center justify-center w-20 h-20 rounded-full">
+            <i class="fas fa-wind text-5xl text-white"></i>
+          </div>
+          <div class="skill-name text-black dark:text-white mt-2">Tailwind CSS</div>
+          <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
+        </div>
 
-<!-- Capcut -->
-<div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="capcut">
-  <div class="skill-icon-wrapper bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center w-20 h-20 rounded-full">
-    <img src="image/capcutlogo.svg" alt="Capcut Logo" class="w-12 h-12 object-contain"/>
-  </div>
-  <div class="skill-name text-black dark:text-white mt-2">Capcut</div>
-  <div class="skill-level">
-    <div class="skill-level-fill" style="width: 100%"></div>
-  </div>
-</div>
+        <!-- GitHub -->
+        <div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="github">
+          <div class="skill-icon-wrapper bg-gradient-to-br from-gray-100 to-black flex items-center justify-center w-20 h-20 rounded-full">
+            <i class="fab fa-github text-5xl text-white"></i>
+          </div>
+          <div class="skill-name text-black dark:text-white mt-2">GitHub</div>
+          <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
+        </div>
 
-<!-- Illustrator -->
-<div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="illustrator">
-  <div class="skill-icon-wrapper bg-gradient-to-br from-orange-500 to-yellow-600 flex items-center justify-center w-20 h-20 rounded-full">
-    <img src="image/illustratorlogo.svg" alt="Illustrator Logo" class="w-12 h-12 object-contain"/>
-  </div>
-  <div class="skill-name text-black dark:text-white mt-2">Illustrator</div>
-  <div class="skill-level">
-    <div class="skill-level-fill" style="width: 100%"></div>
-  </div>
-</div>
+        <!-- Figma -->
+        <div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="figma">
+          <div class="skill-icon-wrapper bg-gradient-to-br from-pink-400 to-purple-500 flex items-center justify-center w-20 h-20 rounded-full">
+            <img src="image/figma.svg" alt="figma Logo" class="w-12 h-12 object-contain"/>
+          </div>
+          <div class="skill-name text-black dark:text-white mt-2">Figma</div>
+          <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
+        </div>
 
-<!-- Canva -->
-<div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="canva">
-  <div class="skill-icon-wrapper bg-gradient-to-br from-cyan-400 to-indigo-500 flex items-center justify-center w-20 h-20 rounded-full">
-    <img src="image/canvalogo.svg" alt="Canva Logo" class="w-12 h-12 object-contain"/>
+        <!-- Capcut -->
+        <div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="capcut">
+          <div class="skill-icon-wrapper bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center w-20 h-20 rounded-full">
+            <img src="image/capcutlogo.svg" alt="Capcut Logo" class="w-12 h-12 object-contain"/>
+          </div>
+          <div class="skill-name text-black dark:text-white mt-2">Capcut</div>
+          <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
+        </div>
+
+        <!-- Illustrator -->
+        <div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="illustrator">
+          <div class="skill-icon-wrapper bg-gradient-to-br from-orange-500 to-yellow-600 flex items-center justify-center w-20 h-20 rounded-full">
+            <img src="image/illustratorlogo.svg" alt="Illustrator Logo" class="w-12 h-12 object-contain"/>
+          </div>
+          <div class="skill-name text-black dark:text-white mt-2">Illustrator</div>
+          <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
+        </div>
+
+        <!-- Canva -->
+        <div class="skill-card border-black border bg-white dark:bg-black skill-item" data-skill="canva">
+          <div class="skill-icon-wrapper bg-gradient-to-br from-cyan-400 to-indigo-500 flex items-center justify-center w-20 h-20 rounded-full">
+            <img src="image/canvalogo.svg" alt="Canva Logo" class="w-12 h-12 object-contain"/>
+          </div>
+          <div class="skill-name text-black dark:text-white mt-2">Canva</div>
+          <div class="skill-level"><div class="skill-level-fill" style="width: 100%"></div></div>
+        </div>
+
+      </div>
+    </div>
   </div>
-  <div class="skill-name text-black dark:text-white mt-2">Canva</div>
-  <div class="skill-level">
-    <div class="skill-level-fill" style="width: 100%"></div>
-  </div>
-</div>
-</div>
-</div>
+</section>
 
 <!-- Enhanced GitHub Stats with Better Layout -->
 <div class="mt-20 scroll-mt-28 sm:scroll-mt-32" id="github">
