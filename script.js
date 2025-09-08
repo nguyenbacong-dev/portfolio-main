@@ -127,7 +127,7 @@
 
             emailjs.sendForm("service_rw9xkqw", "template_z37v5ih", this).then(
               function (response) {
-                alert("Pesan berhasil dikirim!");
+                alert("Message sent successfully!");
                 elements.emailForm.reset();
               },
               function (error) {
@@ -233,7 +233,7 @@
         typeEffect(elements.devName, "Nguyen Ba Cong", 150);
         typeEffect(
           elements.devTitle,
-          "Network Administrator & Web Developer",
+          "Beginner Web Developer",
           100,
           2000
         );
